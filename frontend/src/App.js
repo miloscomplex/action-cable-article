@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import RoomsList from './components/rooms/RoomsList'
-import Room from './components/rooms/Room'
+import ShowRoom from './components/rooms/ShowRoom'
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
     <Router>
       <Switch>
         <Route exact path='/' component={RoomsList} />
-        <Route exact path='/:id' render={routerProps => <Room {...routerProps} />} />
+        <Route exact path='/:id' render={routerProps => <ShowRoom {...routerProps} />} />
       </Switch>
     </Router>
     </div>

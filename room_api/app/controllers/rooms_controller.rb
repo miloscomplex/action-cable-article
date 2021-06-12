@@ -7,7 +7,7 @@ class RoomsController < ApplicationController
 
   def show
     # display by room_id
-    room = Room.find_by(id: params[:room_id])
+    room = Room.find_by(id: params[:id])
     render json: room
   end
 
