@@ -8,7 +8,7 @@ class NewRoomForm extends React.Component {
 
   handleChange = e => {
     this.setState({ name: e.target.value });
-  };
+  }
 
   handleSubmit = event => {
     event.preventDefault()
@@ -16,9 +16,9 @@ class NewRoomForm extends React.Component {
       method: 'POST',
       headers: HEADERS,
       body: JSON.stringify(this.state)
-    });
+    })
     this.setState({ name: '' })
-  };
+  }
 
   render = () => {
     return (
@@ -34,8 +34,8 @@ class NewRoomForm extends React.Component {
           <button value='submit'>submit</button>
         </form>
       </div>
-    );
-  };
+    )
+  }
 }
 
 export default NewRoomForm;
